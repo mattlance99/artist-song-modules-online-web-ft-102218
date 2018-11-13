@@ -1,7 +1,7 @@
 require 'pry'
 
 class Artist
-  #extend Memorable
+  extend Memorable
   attr_accessor :name
   attr_reader :songs
 
@@ -19,7 +19,7 @@ class Artist
   def self.all
     @@artists
   end
-#=begin
+=begin
   def self.reset_all
     self.all.clear
   end
@@ -27,7 +27,7 @@ class Artist
   def self.count
     self.all.count
   end
-#=end 
+=end 
   def add_song(song)
     @songs << song
     song.artist = self
